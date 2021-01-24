@@ -1,0 +1,8 @@
+{
+  "name": "hoeks",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:onursagir/hoeks",
+  "author": "Mehmet Onur Sagir <onuur.s@gmail.com>",
+  "license": "MIT"
+}
