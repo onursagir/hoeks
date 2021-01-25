@@ -32,7 +32,7 @@ render(
     <Home path="/" />
     {Object.values(routes).map((routeObject: any) => {
       return Object.entries(routeObject.default).map(([path, Component]: [string, any]) => {
-        return <Component path={path} />;
+        return <Component key={path} path={path} />;
       });
     })}
   </Router>,
