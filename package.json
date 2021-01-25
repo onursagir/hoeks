@@ -30,6 +30,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start-e2e": "parcel e2e-env/index.html"
+    "start-e2e": "parcel e2e-env/index.html",
+    "cypress": "cypress open -C ./cypress.json -c fileServerFolder=."
   }
 }
