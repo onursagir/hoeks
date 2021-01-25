@@ -1,0 +1,4 @@
+{
+  "testFiles": "./packages/**/tests/e2e/index.tsx",
+  "integrationFolder": "."
+}
