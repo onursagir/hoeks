@@ -30,6 +30,6 @@
   },
   "scripts": {
     "test": "jest",
-    "start-e2e": "yarn workspace e2e-env start"
+    "start-e2e": "parcel e2e-env/index.html"
   }
 }
