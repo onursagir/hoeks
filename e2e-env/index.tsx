@@ -1,5 +1,5 @@
 import * as React from 'react';
-import routes from './packages/*/tests/e2e/routes.tsx';
+import routes from '../packages/*/tests/e2e/routes.tsx';
 import { render } from 'react-dom';
 import { Router } from '@reach/router';
 
