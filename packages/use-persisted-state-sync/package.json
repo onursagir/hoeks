@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
+    "publish": "yarn build && npm publish",
     "build": "tsc --project ./tsconfig.json"
   },
   "dependencies": {},
