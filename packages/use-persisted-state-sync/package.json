@@ -1,5 +1,6 @@
 {
   "name": "@hoeks/use-persisted-value-sync",
+  "name": "@hoeks/use-persisted-state-sync",
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
