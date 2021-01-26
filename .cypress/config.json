@@ -1,0 +1,8 @@
+{
+  "testFiles": "packages/**/tests/e2e/index.tsx",
+  "integrationFolder": ".",
+  "supportFile": ".cypress/support.js",
+  "pluginsFile": ".cypress/plugins.js",
+  "fileServerFolder": "../",
+  "useRelativeSnapshots": true
+}
