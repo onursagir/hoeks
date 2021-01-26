@@ -1,11 +1,11 @@
-# @hoeks/use-persisted-state-sync
+# @hoeks/use-persisted-state
 
 The [hoeks](https://github.com/onursagir/hoeks) `usePersistedState` hook. Persist your state variable asynchronously. By default it uses IndexedDB. Made with TypeScript
 
 ## Installation
 
 ```bash
-$ yarn add @hoeks/use-persisted-state-sync
+$ yarn add @hoeks/use-persisted-state
 $ npm i --save @hoeks/use-persisted-state
 ```
 
@@ -17,7 +17,7 @@ It's similar to the React.useState hook. The only difference is that you provide
 
 ```javascript
 import * as React from 'react';
-import usePersistedStateSync from '@hoeks/use-persisted-state';
+import usePersistedState from '@hoeks/use-persisted-state';
 
 const Example: React.FunctionComponent = () => {
   const [count, setCount, clear, isHydrated] = usePersistedState(1, 'example');
