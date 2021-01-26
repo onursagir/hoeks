@@ -1,0 +1,9 @@
+{
+  "name": "@hoeks/use-persisted-state",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "idb-keyval": "^5.0.2"
+  }
+}
