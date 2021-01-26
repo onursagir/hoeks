@@ -9,7 +9,7 @@ const Home: React.FunctionComponent = () => {
       <h1>E2E Routes overview</h1>
       {Object.entries(routes).map(([packageName, routeObject]: [string, any]) => {
         return (
-          <div>
+          <div key={packageName}>
             <h3>{packageName}</h3>
             <ul>
               {Object.keys(routeObject.default).map((route) => {
