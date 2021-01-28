@@ -1,9 +1,9 @@
 import * as React from 'react';
+import * as ReactDom from 'react-dom';
 import routes from '../packages/*/tests/e2e/routes.tsx';
-import { render } from 'react-dom';
-import { Link, Router } from '@reach/router';
+import { Link, RouteComponentProps, Router } from '@reach/router';
 
-const Home: React.FunctionComponent = () => {
+const Home: React.FunctionComponent<RouteComponentProps> = () => {
   return (
     <>
       <h1>E2E Routes overview</h1>
@@ -27,14 +27,17 @@ const Home: React.FunctionComponent = () => {
   );
 };
 
-render(
-  <Router>
-    <Home path="/" />
-    {Object.values(routes).map((routeObject: any) => {
-      return Object.entries(routeObject.default).map(([path, Component]: [string, any]) => {
-        return <Component key={path} path={path} />;
-      });
-    })}
-  </Router>,
-  document.getElementById('app')
-);
+const App: React.FunctionComponent = () => {
+  return (
+    <Router>
+      <Home path="/" />
+      {Object.values(routes).map((routeObject: any) => {
+        return Object.entries(routeObject.default).map(([path, Component]: [string, any]) => {
+          return <Component key={path} path={path} />;
+        });
+      })}
+    </Router>
+  );
+};
+
+ReactDom.render(<App />, document.getElementById('app'));
