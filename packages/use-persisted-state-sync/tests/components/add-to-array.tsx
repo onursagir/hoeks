@@ -6,11 +6,11 @@ const AddToArray: React.FunctionComponent = () => {
 
   return (
     <>
-      <button id="add-btn" onClick={() => setArray(arr => [...arr, arr.length])}>
+      <button data-testid="add-btn" onClick={() => setArray((arr) => [...arr, arr.length])}>
         button
       </button>
-      <p id="count">{array}</p>
-      <button id="clear-btn" onClick={clear}>
+      <p data-testid="count">{array}</p>
+      <button data-testid="clear-btn" onClick={clear}>
         clear
       </button>
     </>
