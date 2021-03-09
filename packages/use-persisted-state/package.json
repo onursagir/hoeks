@@ -1,0 +1,12 @@
+{
+  "name": "@hoeks/use-persisted-state",
+  "version": "1.0.2",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json"
+  },
+  "dependencies": {
+    "idb-keyval": "^5.0.4"
+  }
+}

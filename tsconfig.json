@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "lib": ["ES2015", "ES2017", "DOM"] /* Specify library files to be included in the compilation. */,
     "module": "commonjs",
+    "resolveJsonModule": true,
     "jsx": "react",
     "strict": true,
     "esModuleInterop": true,

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Mehmet Sagir",
+    "github": "@onursagir",
+    "dob": {
+      "day": 1,
+      "month": 1,
+      "year": 1994
+    },
+    "repos": {
+      "hoeks": {
+        "downloads": "1000",
+        "stargazers": ["@onursagir", "@j.doe", "@jh.doe"]
+      }
+    }
+  },
+  {
+    "name": "Johan Doe",
+    "github": "@j.doe",
+    "dob": {
+      "day": 1,
+      "month": 1,
+      "year": 1994
+    },
+    "repos": {
+      "not-hoeks": {
+        "downloads": "0",
+        "stargazers": []
+      }
+    }
+  },
+  {
+    "name": "Johanna Doe",
+    "github": "@jh.doe",
+    "dob": {
+      "day": 1,
+      "month": 1,
+      "year": 1994
+    },
+    "repos": {
+      "also-not-hoeks": {
+        "downloads": "-1",
+        "stargazers": []
+      }
+    }
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "name": "@hoeks/use-abortable-fetch",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json"
+  }
+}
