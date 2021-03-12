@@ -4,17 +4,13 @@ import usePersistedStateSync from '../../src';
 const AddToArray: React.FunctionComponent = () => {
   const [array, setArray, clear] = usePersistedStateSync<number[]>([], 'test-component-key');
 
-  const addToArray = React.useCallback(() => {
-    setArray([...array, array.length]);
-  }, [array, setArray]);
-
   return (
     <>
-      <p id="count">{array}</p>
-      <button id="add-btn" onClick={addToArray}>
+      <button data-testid="add-btn" onClick={() => setArray((arr) => [...arr, arr.length])}>
         button
       </button>
-      <button id="clear-btn" onClick={clear}>
+      <p data-testid="count">{array}</p>
+      <button data-testid="clear-btn" onClick={clear}>
         clear
       </button>
     </>

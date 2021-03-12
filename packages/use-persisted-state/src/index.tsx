@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Types from './types';
 import * as idb from 'idb-keyval';
 
-const usePersistedState: Types.UsePersistedState = <S,>(stateArg: S, key: string, storeMethod?: Types.StorageMethod) => {
+const usePersistedState: Types.UsePersistedState = <S extends unknown>(stateArg: S, key: string, storeMethod?: Types.StorageMethod) => {
   const store: Types.StorageMethod = storeMethod || idb;
   const [state, setState] = React.useState<S>(stateArg);
   const [isHydrated, setIsHydrated] = React.useState<boolean>(false);

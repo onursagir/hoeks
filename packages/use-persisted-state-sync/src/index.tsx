@@ -1,15 +1,18 @@
 import * as React from 'react';
 import type * as Types from './types';
 
-const usePersistedStateSync: Types.UsePersistedStateSync = <S,>(stateArg: S, key: string) => {
+const usePersistedStateSync: Types.UsePersistedStateSync = <S extends unknown>(
+  stateArg: S,
+  key: string
+) => {
   const initialState = localStorage.getItem(key) ? JSON.parse(localStorage[key]).value : stateArg;
-
-  const [state, setState] = React.useState(initialState);
+  const [state, setState] = React.useState<S>(initialState);
 
   const setAndPersistState = React.useCallback(
-    (state) => {
-      localStorage.setItem(key, JSON.stringify({ value: state }));
-      setState(state);
+    (arg) => {
+      const newState = typeof arg === 'function' ? arg(state) : arg;
+      localStorage.setItem(key, JSON.stringify({ value: newState }));
+      setState(newState);
     },
     [state, setState]
   );
@@ -19,7 +22,8 @@ const usePersistedStateSync: Types.UsePersistedStateSync = <S,>(stateArg: S, key
   }, []);
 
   React.useEffect(() => {
-    if (localStorage[key] == null) localStorage.setItem(key, JSON.stringify({ value: state }));
+    if (localStorage.getItem(key) == null)
+      localStorage.setItem(key, JSON.stringify({ value: state }));
   }, []);
 
   return [state, setAndPersistState, clear];

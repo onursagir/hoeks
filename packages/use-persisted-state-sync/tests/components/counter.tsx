@@ -6,11 +6,11 @@ const Counter: React.FunctionComponent = () => {
 
   return (
     <>
-      <p id="count">{count}</p>
-      <button id="add-btn" onClick={() => setCount(count + 1)}>
+      <p data-testid="count">{count}</p>
+      <button data-testid="add-btn" onClick={() => setCount((c) => c + 1)}>
         button
       </button>
-      <button id="clear-btn" onClick={clear}>
+      <button data-testid="clear-btn" onClick={clear}>
         clear
       </button>
     </>
